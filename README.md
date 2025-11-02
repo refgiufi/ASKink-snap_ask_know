@@ -89,49 +89,6 @@ ASKink/
 └── 📚 README.md            # This documentation
 ```
 
-## � Technical Specifications
-
-### **API Integration**
-- **Endpoint**: `https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent`
-- **Supported Models**: Gemini 1.5 Flash, Gemini 2.0 Flash, Gemini Pro, etc.
-- **Image Format**: PNG with optimized quality
-- **Text Processing**: Advanced prompt handling with context awareness
-
-### **Chrome Extension Details**
-- **Manifest Version**: 3 (Latest standard)
-- **Permissions**:
-  - `activeTab`: Screenshot capture
-  - `scripting`: Tab interaction
-  - `tabs`: Browser tab management
-- **Host Permissions**: `https://generativelanguage.googleapis.com/*`
-- **Content Security**: Strict CSP for enhanced security
-
-### **UI Technology**
-- **Design System**: Modern glassmorphism with CSS3
-- **Responsive**: Dynamic height adjustment
-- **Animations**: Smooth transitions and loading states
-- **Typography**: Inter font family for optimal readability
-
-## 🎨 Design Features
-
-### **Visual Elements**
-- **Header**: Custom ASKink logo with gradient background
-- **Glassmorphism**: Semi-transparent containers with backdrop blur
-- **Color Scheme**: Professional blue gradient (`#4c63d2` to `#5b2c87`)
-- **Typography**: Clean, readable Inter font family
-
-### **User Interface**
-- **Responsive Layout**: Adapts to content (compact/expanded modes)
-- **Loading States**: Spinner with processing messages
-- **Error Handling**: User-friendly error displays
-- **Button States**: Clear visual feedback for all interactions
-
-### **Accessibility**
-- **High Contrast**: Optimized text and background contrast
-- **Clear Labels**: Descriptive tooltips and button text
-- **Keyboard Support**: Full keyboard navigation support
-- **Screen Reader**: Semantic HTML for accessibility
-
 ## 🔒 Privacy & Security
 
 - **Local Storage**: API keys stored securely within extension
@@ -203,11 +160,7 @@ We welcome contributions! Whether it's:
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🙏 Acknowledgments
 
-- **Google AI Studio**: For providing powerful Gemini models
-- **Chrome Extensions Team**: For the robust Manifest V3 platform
-- **Open Source Community**: For inspiration and best practices
 
 ---
 
