@@ -1,6 +1,6 @@
 # ASKink – Snap. Ask. Know.
 
-![ASKink Extension](screenshot.png)
+![ASKink Extension](logos/Demo%20App.png)
 
 ASKink is a powerful Chrome Extension that revolutionizes how you interact with AI. Capture screenshots, ask questions with text-only mode, and get instant AI-powered insights from Google's Gemini models – all in a beautiful, modern interface.
 
