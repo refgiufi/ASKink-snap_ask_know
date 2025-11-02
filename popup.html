@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASKink</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header-section">
+            <div class="header-title">
+                <img src="logo.png" alt="ASKink Logo" class="header-logo-img">
+            </div>
+            <button id="toggleApiSectionButton" class="toggle-section-btn" title="Toggle API Key Settings">
+                ⚙️
+            </button>
+        </div>
+        
+        <!-- API Key Section -->
+        <div class="api-key-section" id="apiKeySection">
+            <div class="input-header">
+                <label for="apiKeyInput">Google AI Studio API Key:</label>
+            </div>
+            <div class="api-key-input-container">
+                <input 
+                    type="password" 
+                    id="apiKeyInput" 
+                    placeholder="Enter your API key from https://aistudio.google.com/api-keys"
+                    class="api-key-input"
+                />
+                <button id="toggleApiKeyButton" class="toggle-api-btn" title="Show/Hide API Key">
+                    👁️
+                </button>
+                <button id="saveApiKeyButton" class="save-api-btn" title="Save API Key">
+                    💾
+                </button>
+            </div>
+            <div class="api-key-help">
+                <small>
+                    Get your free API key from 
+                    <a href="https://aistudio.google.com/api-keys" target="_blank">Google AI Studio</a>
+                </small>
+            </div>
+        </div>
+        
+        <div class="input-section">
+            <div class="input-header">
+                <label for="promptInput">Enter your prompt:</label>
+                <button id="resetPromptButton" class="reset-prompt-btn" title="Reset to default prompt">
+                    🔄
+                </button>
+            </div>
+            <textarea 
+                id="promptInput" 
+                placeholder="Ask any question, request analysis, or describe what you want to know. Use text-only mode for general questions without screenshots."
+                rows="4"
+            ></textarea>
+            <div class="text-only-option">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="textOnlyMode" />
+                    <span class="checkmark"></span>
+                    <span class="checkbox-label">Text-only mode (send prompt without screenshot)</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="model-section">
+            <label for="modelSelect">Choose AI Model:</label>
+            <select id="modelSelect" class="model-select">
+                <!-- Options will be populated by JavaScript -->
+            </select>
+        </div>
+
+        <div class="action-section">
+            <button id="captureButton" class="capture-btn">
+                <span class="btn-text">Capture and Send</span>
+            </button>
+        </div>
+
+        <div id="loadingIndicator" class="loading hidden">
+            <div class="spinner"></div>
+            <span>Processing your request...</span>
+        </div>
+
+        <div id="responseContainer" class="response-container hidden">
+            <div class="response-header">
+                <h3>🤖 AI Response:</h3>
+                <div class="response-actions">
+                    <button id="copyResponseButton" class="copy-btn" title="Copy response">
+                        📋
+                    </button>
+                    <button id="clearResponseButton" class="clear-response-btn" title="Clear this response">
+                        🗑️
+                    </button>
+                </div>
+            </div>
+            <div id="responseText" class="response-text"></div>
+        </div>
+
+        <div id="errorContainer" class="error-container hidden">
+            <h3>Error:</h3>
+            <div id="errorText" class="error-text"></div>
+        </div>
+
+        <div class="footer-section">
+            <!-- 
+            <button id="getModelsButton" class="get-models-btn">
+                <span class="btn-text">🔄 Get Available Models</span>
+            </button>
+            -->
+            <div class="cache-buttons">
+                <button id="clearCacheButton" class="clear-cache-btn">
+                    <span class="btn-text">Clear Cache</span>
+                </button>
+                <button id="resetAllButton" class="reset-all-btn">
+                    <span class="btn-text">Reset All</span>
+                </button>
+            </div>
+            <div class="footer-info">
+                <small>Using optimized models for screenshot analysis</small>
+            </div>
+            <div class="footer-credit">
+                <small>Created by <a href="https://www.linkedin.com/in/refgiufi/" target="_blank">Refgiufi</a> with AI assistance</small>
+            </div>
+        </div>
+    </div>
+
+    <script src="api.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>
